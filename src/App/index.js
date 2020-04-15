@@ -6,10 +6,11 @@ import {
     Link
 } from "react-router-dom";
 
-import Cars from '../pages/Cars'
+import Car from '../pages/Car';
 import Country from '../pages/Country';
-import Home from '../pages/Home'
-import Instruments from '../pages/Instruments'
+import Home from '../pages/Home';
+import Instrument from '../pages/Instrument';
+import Animal from '../pages/Animal';
 
 export default function BasicExample() {
     return (
@@ -21,18 +22,22 @@ export default function BasicExample() {
                     &nbsp;&nbsp;&nbsp;
                     <Link to="/country">Country</Link>
                     &nbsp;&nbsp;&nbsp;
-                    <Link to="/cars">Cars</Link>
+                    <Link to="/car">Car</Link>
                     &nbsp;&nbsp;&nbsp;
-                    <Link to="/instruments">Instruments</Link>
+                    <Link to="/instrument">Instrument</Link>
+                    &nbsp;&nbsp;&nbsp;
+                    <Link to="/animal">Animal</Link>  
                 </nav>
 
                 <hr />
 
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/cars" component={Cars}/>
-                    <Route path="/country" component={Country}/>
-                    <Route path="/instruments" component={Instruments}/>
+                    <Route exact path="/car" component={Car}/>
+                    <Route exact path="/country" component={Country}/>
+                    <Route exact pathe="/instrument" component={Instrument}/>
+                    <Route exact pathe="/animal" component={Animal}/>
+                    
                 </Switch>
             </>
         </Router>

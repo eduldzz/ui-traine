@@ -38,9 +38,12 @@ export default ({data, columns, headers, onSort, limit, total, onPageClick, curr
                             <tr key={d.id} className={d.deleted ? "bg-danger": ""}>
                                 {map(columns, column => {
                                     if(column === 'actions') {
-                                        return (<td><Button tag={Link} color="primary" to={`/country/edit/${d.code}`}> Edición </Button></td>);
+                                        return (<td><Button tag={Link} color="primary" to={`/country/edit/${d.code}`}> Edición </Button>
+                                                                                        &nbsp;
+                                                <Button tag={Link} color="primary" to={`/country/edit/${d.code}`}> Delete </Button></td> );
                                     }
                                     return (<td>{get(d, column)}</td>);
+                                    
                                 })}
                             </tr>
                         ))}
