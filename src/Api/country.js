@@ -8,6 +8,9 @@ class Country {
         const filterObj = new URLSearchParams(filters).toString();
         return Http.get(`${API}?${filterObj}`);
     }
+    static deleteCountry (id){
+        return Http.delete(`${API}?${id}`);
+    }
 }
 
 export default Country;

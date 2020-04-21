@@ -9,3 +9,9 @@ export const fetchCarsSucceeded = (cars, limit, total) => ({
 
 export const SORT_CAR = 'SORT_CAR';
 export const sortCar = sort => ({type: SORT_CAR, sort});
+
+export const DELETE_CARS_REQUESTED = 'DELETE_CARS_REQUESTED';
+export const DELETE_CARS_SUCCEEDED = 'DELETE_CARS_SUCCEEDED';
+
+export const deleteCarsRequested = id => ({type: DELETE_CARS_REQUESTED, id});
+export const deleteCarsSucceeded = (car) => ({type: DELETE_CARS_SUCCEEDED,car});

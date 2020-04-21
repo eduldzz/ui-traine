@@ -15,11 +15,13 @@ import {fetchAnimals} from './animal'
 
 
 
+
+
 export default function* root() {
     return yield all([
-        takeEvery(FETCH_COUNTRIES_REQUESTED,fetchCountries,
-                  FETCH_CARS_REQUESTED,fetchCars,
-                  FETCH_INSTRUMENTS_REQUESTED,fetchInstruments,
-                  FETCH_ANIMALS_REQUESTED,fetchAnimals )
+        takeEvery(FETCH_COUNTRIES_REQUESTED,fetchCountries),
+        takeEvery(FETCH_ANIMALS_REQUESTED,fetchAnimals),
+        takeEvery(FETCH_CARS_REQUESTED,fetchCars),
+        takeEvery(FETCH_INSTRUMENTS_REQUESTED,fetchInstruments)
     ])
 }

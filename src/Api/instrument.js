@@ -8,6 +8,9 @@ class Instrument {
         const filterObj = new URLSearchParams(filters).toString();
         return Http.get(`${API}?${filterObj}`);
     }
+    static deleteInstrument (id){
+        return Http.delete(`${API}?${id}`);
+    }
 }
 
 export default Instrument;

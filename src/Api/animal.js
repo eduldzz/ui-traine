@@ -8,6 +8,13 @@ class Animal {
         const filterObj = new URLSearchParams(filters).toString();
         return Http.get(`${API}?${filterObj}`);
     }
+    
+    static deleteAnimal (id){
+        return Http.delete(`${API}?${id}`);
+    }
 }
+
+
+
 
 export default Animal;

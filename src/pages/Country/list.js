@@ -12,7 +12,9 @@ import {
 
 import {
     fetchCountriesRequested,
-    sortCountry
+    sortCountry,
+    //deleteCountriesRequested
+
 } from '../../actions/country'
 
 class App extends PureComponent {
@@ -79,7 +81,8 @@ const mapStateToProps = (state /* nuestro Store */, ownProps /*  */ ) => {
 
 const mapDispatchToProps = (dispatch /* acciones a disparar */, ownProps /*  */ ) => ({
     getCountries: filters => dispatch(fetchCountriesRequested(filters)),
-    onSort: sort => dispatch(sortCountry(sort))
+    onSort: sort => dispatch(sortCountry(sort)),
+    //deleteCountries: id => dispatch(deleteCountriestRequested(id))
 })
 
 export default connect(

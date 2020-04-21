@@ -6,7 +6,8 @@ import {
 
 import CountryAPI from '../Api/country';
 import {
-    fetchCountriesSucceeded
+    fetchCountriesSucceeded,
+    deleteCountriesSucceeded
 } from '../actions/country';
 
 export function* fetchCountries({filter}) {
@@ -22,4 +23,15 @@ export function* fetchCountries({filter}) {
     } catch (err) {
         alert(JSON.stringify(err));
     }
+}
+export function* deleteCountries({id}) {
+       // try { 
+        const {countries} = yield call(
+            CountryAPI.deleteCountry,
+            id 
+        );
+            yield delay(1500);
+            yield put(
+            deleteCountriesSucceeded ()
+        );
 }

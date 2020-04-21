@@ -40,7 +40,7 @@ class App extends PureComponent {
                         <h3>Tabla de datos </h3>
                     </Col>
                     <Col sm="3">
-                        <Button color="primary" tag={Link} to="/country/edit/new"> Nuevo </Button>
+                        <Button color="primary" tag={Link} to="/animal/edit/new"> Nuevo </Button>
                     </Col>
                 </Row>
                 <hr/>

@@ -8,6 +8,9 @@ class Car {
         const filterObj = new URLSearchParams(filters).toString();
         return Http.get(`${API}?${filterObj}`);
     }
+    static deleteCar (id){
+        return Http.delete(`${API}?${id}`);
+    }
 }
 
 export default Car;
