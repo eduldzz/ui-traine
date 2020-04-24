@@ -41,7 +41,7 @@ export default ({data, columns, headers, onSort, limit, total, onPageClick, onDe
                                         return (<td>
                                             <Button tag={Link} color="primary" to={`/country/edit/${d.code}`}> Edición </Button>
                                                                                         &nbsp;
-                                             <Button tag ={Link} color="danger" onClick={() => onDelete(d.id)} > Eliminar </Button>
+                                             <Button color="danger" onClick={() => onDelete(d.code)} > Eliminar </Button>
                                                 </td> );
                                     }
                                     return (<td>{get(d, column)}</td>);

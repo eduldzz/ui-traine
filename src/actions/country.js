@@ -14,4 +14,4 @@ export const DELETE_COUNTRIES_REQUESTED = 'DELETE_COUNTRIES_REQUESTED';
 export const DELETE_COUNTRIES_SUCCEEDED = 'DELETE_COUNTRIES_SUCCEEDED';
 
 export const deleteCountriesRequested = id => ({type: DELETE_COUNTRIES_REQUESTED, id});
-export const deleteCountriesSucceeded = countries => ({type: DELETE_COUNTRIES_SUCCEEDED,countries});
+export const deleteCountriesSucceeded = () => ({type: DELETE_COUNTRIES_SUCCEEDED});

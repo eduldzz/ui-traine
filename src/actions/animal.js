@@ -14,4 +14,4 @@ export const DELETE_ANIMALS_REQUESTED = 'DELETE_ANIMALS_REQUESTED';
 export const DELETE_ANIMALS_SUCCEEDED = 'DELETE_ANIMALS_SUCCEEDED';
 
 export const deleteAnimalsRequested = id => ({type: DELETE_ANIMALS_REQUESTED, id});
-export const deleteAnimalsSucceeded = (animal) => ({type: DELETE_ANIMALS_SUCCEEDED,animal});
+export const deleteAnimalsSucceeded = animals => ({type: DELETE_ANIMALS_SUCCEEDED,animals});

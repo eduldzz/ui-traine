@@ -14,4 +14,4 @@ export const DELETE_CARS_REQUESTED = 'DELETE_CARS_REQUESTED';
 export const DELETE_CARS_SUCCEEDED = 'DELETE_CARS_SUCCEEDED';
 
 export const deleteCarsRequested = id => ({type: DELETE_CARS_REQUESTED, id});
-export const deleteCarsSucceeded = (car) => ({type: DELETE_CARS_SUCCEEDED,car});
+export const deleteCarsSucceeded = cars => ({type: DELETE_CARS_SUCCEEDED,cars});

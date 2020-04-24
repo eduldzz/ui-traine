@@ -1,7 +1,6 @@
 import {
     FETCH_COUNTRIES_SUCCEEDED,
     FETCH_COUNTRIES_REQUESTED,
-    DELETE_COUNTRIES_REQUESTED,
     DELETE_COUNTRIES_SUCCEEDED,
     SORT_COUNTRY
 } from '../../actions/country';
@@ -29,8 +28,6 @@ export default (state = initialState, action) => {
                     [action.sort.sort]
                 )
             };
-            case DELETE_COUNTRIES_REQUESTED:
-                return {...state, loading: true};
             case DELETE_COUNTRIES_SUCCEEDED:
                 return {...countries, limit, total}
 

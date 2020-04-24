@@ -24,14 +24,11 @@ export function* fetchCountries({filter}) {
         alert(JSON.stringify(err));
     }
 }
-export function* deleteCountries({id}) {
-       // try { 
-        const {countries} = yield call(
-            CountryAPI.deleteCountry,
-            id 
-        );
-            yield delay(1500);
-            yield put(
-            deleteCountriesSucceeded ()
-        );
+export function* deleteCountries({id}){
+    yield call (deleteCountries,id)
+    yield call (fetchCountries)
+    yield delay(1500);
+    yield put (deleteCountriesSucceeded (true));
 }
+
+       

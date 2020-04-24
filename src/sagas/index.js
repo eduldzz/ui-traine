@@ -7,12 +7,13 @@ import {FETCH_COUNTRIES_REQUESTED} from '../actions/country';
 import {FETCH_CARS_REQUESTED} from '../actions/car';
 import {FETCH_INSTRUMENTS_REQUESTED} from '../actions/instrument';
 import {FETCH_ANIMALS_REQUESTED} from '../actions/animal';
+import {DELETE_COUNTRIES_REQUESTED} from '../actions/country'
 
 import {fetchCountries} from './country'
 import {fetchCars} from './car'
 import {fetchInstruments} from './instrument'
 import {fetchAnimals} from './animal'
-
+import {deleteCountries} from './country'
 
 
 
@@ -22,6 +23,8 @@ export default function* root() {
         takeEvery(FETCH_COUNTRIES_REQUESTED,fetchCountries),
         takeEvery(FETCH_ANIMALS_REQUESTED,fetchAnimals),
         takeEvery(FETCH_CARS_REQUESTED,fetchCars),
-        takeEvery(FETCH_INSTRUMENTS_REQUESTED,fetchInstruments)
+        takeEvery(FETCH_INSTRUMENTS_REQUESTED,fetchInstruments),
+        takeEvery(DELETE_COUNTRIES_REQUESTED, deleteCountries)
+        
     ])
 }

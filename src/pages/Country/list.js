@@ -12,8 +12,8 @@ import {
 
 import {
     fetchCountriesRequested,
-    sortCountry,
-    //deleteCountriesRequested
+    deleteCountriesRequested,
+    sortCountry
 
 } from '../../actions/country'
 
@@ -33,7 +33,7 @@ class App extends PureComponent {
             total,
             tableProps,
             onSort,
-            loading
+            loading,
         } = this.props;
         return (
             <Container>
@@ -58,7 +58,8 @@ class App extends PureComponent {
                                 onSort,
                                 limit,
                                 total,
-                                onPageClick: this.handlePagination
+                                onPageClick: this.handlePagination,
+                                onDelete:this.props.deleteCountries
                             }}/>
                         )}
                     </Col>
@@ -82,7 +83,7 @@ const mapStateToProps = (state /* nuestro Store */, ownProps /*  */ ) => {
 const mapDispatchToProps = (dispatch /* acciones a disparar */, ownProps /*  */ ) => ({
     getCountries: filters => dispatch(fetchCountriesRequested(filters)),
     onSort: sort => dispatch(sortCountry(sort)),
-    //deleteCountries: id => dispatch(deleteCountriestRequested(id))
+    deleteCountries: id => dispatch (deleteCountriesRequested, id)
 })
 
 export default connect(
